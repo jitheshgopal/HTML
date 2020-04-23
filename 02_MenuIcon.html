@@ -1,0 +1,71 @@
+
+<style type="text/css">
+	
+
+	div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+</style> 
+
+<script type="text/javascript">
+	function myFunction(x) {
+  x.classList.toggle("change");
+}
+
+</script>
+
+
+<div></div>
+<div></div>
+<div></div>
+
+<br>
+<br>
+
+HTML & CSS: We use the same styles as before, only this time, we wrap a container element around each div element and we specify a class name for each.
+
+The container element is used to show a pointer symbol when the user moves the mouse over the divs (bars). When it is clicked on, it will execute a JavaScript function that adds a new class name to it, which will change the styles of each horizontal bar: the first and the last bar is transformed and rotated to the letter "x". The bar in the middle fades out and becomes invisible.
+
+
+<br>
+<br>
+
+
+
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
